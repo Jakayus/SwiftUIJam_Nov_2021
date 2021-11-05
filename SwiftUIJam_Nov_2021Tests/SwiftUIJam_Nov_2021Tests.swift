@@ -36,5 +36,11 @@ class SwiftUIJam_Nov_2021Tests: XCTestCase {
         XCTAssertNotNil(result)
         XCTAssertEqual(result, "4.0")
     }
+    
+    func testValidation() {
+        let calculator = ExpressionCalculator()
+        XCTAssertTrue(calculator.validate("2 + 2 / 2"))
+        XCTAssertFalse(calculator.validate("bunchof428397nonsense ?? ++ yay"))
+    }
 
 }
