@@ -8,7 +8,7 @@
 import Foundation
 import Expression
 
-class ExpressionCalculator {
+struct ExpressionCalculator {
     ///Evaluates the expression and returns the answer as a cleaned up string.
     func evaluate(_ str: String) throws -> String {
         //Using the expression package to evaluate the expression

@@ -29,5 +29,12 @@ class SwiftUIJam_Nov_2021Tests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testAddition() {
+        let calculator = ExpressionCalculator()
+        let result = try? calculator.evaluate("2 + 2")
+        XCTAssertNotNil(result)
+        XCTAssertEqual(result, "4.0")
+    }
 
 }
