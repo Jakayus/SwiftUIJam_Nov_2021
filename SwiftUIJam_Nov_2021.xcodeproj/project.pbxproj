@@ -16,6 +16,8 @@
 		768C23BE2735B79D00B1873A /* SwiftUIJam_Nov_2021UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C23BD2735B79D00B1873A /* SwiftUIJam_Nov_2021UITestsLaunchTests.swift */; };
 		768C23CC2735BF2F00B1873A /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C23CB2735BF2F00B1873A /* CalculatorButton.swift */; };
 		768C23D02735BF7500B1873A /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C23CF2735BF7500B1873A /* CalculatorBrain.swift */; };
+		EB57D2B82735C9BA00A76EC9 /* ExpressionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57D2B72735C9BA00A76EC9 /* ExpressionCalculator.swift */; };
+		EB57D2BB2735C9DB00A76EC9 /* Expression in Frameworks */ = {isa = PBXBuildFile; productRef = EB57D2BA2735C9DB00A76EC9 /* Expression */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		768C23BD2735B79D00B1873A /* SwiftUIJam_Nov_2021UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIJam_Nov_2021UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		768C23CB2735BF2F00B1873A /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		768C23CF2735BF7500B1873A /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		EB57D2B72735C9BA00A76EC9 /* ExpressionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB57D2BB2735C9DB00A76EC9 /* Expression in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +149,7 @@
 		768C23CD2735BF3B00B1873A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB57D2B72735C9BA00A76EC9 /* ExpressionCalculator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +178,9 @@
 			dependencies = (
 			);
 			name = SwiftUIJam_Nov_2021;
+			packageProductDependencies = (
+				EB57D2BA2735C9DB00A76EC9 /* Expression */,
+			);
 			productName = SwiftUIJam_Nov_2021;
 			productReference = 768C239D2735B79900B1873A /* SwiftUIJam_Nov_2021.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +253,9 @@
 				Base,
 			);
 			mainGroup = 768C23942735B79900B1873A;
+			packageReferences = (
+				EB57D2B92735C9DB00A76EC9 /* XCRemoteSwiftPackageReference "Expression" */,
+			);
 			productRefGroup = 768C239E2735B79900B1873A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,6 +301,7 @@
 				768C23A32735B79900B1873A /* ContentView.swift in Sources */,
 				768C23CC2735BF2F00B1873A /* CalculatorButton.swift in Sources */,
 				768C23D02735BF7500B1873A /* CalculatorBrain.swift in Sources */,
+				EB57D2B82735C9BA00A76EC9 /* ExpressionCalculator.swift in Sources */,
 				768C23A12735B79900B1873A /* SwiftUIJam_Nov_2021App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,6 +651,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB57D2B92735C9DB00A76EC9 /* XCRemoteSwiftPackageReference "Expression" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nicklockwood/Expression.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB57D2BA2735C9DB00A76EC9 /* Expression */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB57D2B92735C9DB00A76EC9 /* XCRemoteSwiftPackageReference "Expression" */;
+			productName = Expression;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 768C23952735B79900B1873A /* Project object */;
 }
