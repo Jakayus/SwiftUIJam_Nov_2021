@@ -60,7 +60,7 @@ struct TempDisplayView: View {
             RoundedRectangle(cornerRadius: 3.0)
                 .frame(height: UIScreen.main.bounds.height / 5)
                 .padding(.horizontal)
-                .foregroundColor(Color.blue)
+                .foregroundColor(Color.gray)
             Text("Display Area")
                 .foregroundColor(.primary)
                 .font(.title)
