@@ -11,16 +11,19 @@ struct CalculatorButton: View {
     
     var body: some View {
         Button(action: {
-            
+            //function call here
+            print("button press")
         } ) {
-            Image(systemName: "lessthan.circle.fill")
-                .foregroundColor(.white)
-                .padding()
+                Image(systemName: "lessthan.circle.fill")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .foregroundColor(.primary)
         }
-        .background(RoundedRectangle(cornerRadius: 3.0))
-        .foregroundColor(.orange)
-        
-    }
+        .background(
+            RoundedRectangle(cornerRadius: 3.0)
+                .stroke(Color.blue, lineWidth: 3.0)
+        )
+    }//end CalculatorButton View
+    
 }
 
 struct CalculatorButton_Previews: PreviewProvider {
