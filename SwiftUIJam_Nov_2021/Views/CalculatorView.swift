@@ -8,34 +8,46 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    
-    //MARK: - Properties
-    
-    let data = (1...12).map {"Button \($0)"} //Grid must count data items
-    
-    //grid properties
-    let columns = [
-        GridItem(.flexible(), spacing: 20),
-        GridItem(.flexible(), spacing: 20),
-        GridItem(.flexible(), spacing: 20),
-        GridItem(.flexible(), spacing: 20)
-    ]
-    
+          
     //MARK: - View
     var body: some View {
         
         VStack {
             TempDisplayView() //TODO: create real DisplayView
             
-            LazyVGrid (columns: columns, spacing: 20)
-            {
-                ForEach(data, id: \.self) { item in
-                    CalculatorButton()
+            VStack {
+                HStack {
+                    CalculatorButton(buttonText: "7", buttonTextColor: Color.white, buttonColor: Color.black)
+                    CalculatorButton(buttonText: "8", buttonTextColor: Color.white, buttonColor: Color.black)
+                    CalculatorButton(buttonText: "9", buttonTextColor: Color.white, buttonColor: Color.black)
+                    CalculatorButton(buttonText: "X", buttonTextColor: Color.white, buttonColor: Color.orange)
                 }
+                
+                HStack {
+                    CalculatorButton(buttonText: "4", buttonTextColor: Color.white, buttonColor: Color.black)
+                    CalculatorButton(buttonText: "5", buttonTextColor: Color.white, buttonColor: Color.black)
+                    CalculatorButton(buttonText: "6", buttonTextColor: Color.white, buttonColor: Color.black)
+                    CalculatorButton(buttonText: "-", buttonTextColor: Color.white, buttonColor: Color.orange)
+                }
+                HStack {
+                    CalculatorButton(buttonText: "1", buttonTextColor: Color.white, buttonColor: Color.black)
+                    CalculatorButton(buttonText: "2", buttonTextColor: Color.white, buttonColor: Color.black)
+                    CalculatorButton(buttonText: "3", buttonTextColor: Color.white, buttonColor: Color.black)
+                    CalculatorButton(buttonText: "+", buttonTextColor: Color.white, buttonColor: Color.orange)
+                }
+                
+                HStack {
+                    
+                    CalculatorButton(buttonText: "0", buttonTextColor: Color.white, buttonColor: Color.black)
+                    //Empty button, needs update
+                    CalculatorButton(buttonText: "", buttonTextColor: Color.white, buttonColor: Color.black)
+                    
+                    CalculatorButton(buttonText: ".", buttonTextColor: Color.white, buttonColor: Color.black)
+                    CalculatorButton(buttonText: "=", buttonTextColor: Color.white, buttonColor: Color.orange)
+                }
+                
             }
-            .padding(.horizontal)
-            .frame(
-                maxHeight: .infinity)
+            .padding()
         }
         
     }// end CalculatorView
