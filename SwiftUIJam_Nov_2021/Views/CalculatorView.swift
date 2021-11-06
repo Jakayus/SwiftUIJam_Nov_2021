@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CalculatorView: View {
           
+    @ObservedObject var viewModel = CalculatorViewModel()
+    
     //MARK: - View
     var body: some View {
         
@@ -17,35 +19,36 @@ struct CalculatorView: View {
             
             VStack {
                 HStack {
-                    CalculatorButton(buttonText: "7", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "8", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "9", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "x", buttonTextColor: Color.white, buttonColor: Color.orange)
+                    CalculatorButton(buttonText: "7", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.seven, viewModel: viewModel)
+                    CalculatorButton(buttonText: "8", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.eight, viewModel: viewModel)
+                    CalculatorButton(buttonText: "9", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.nine,viewModel: viewModel)
+                    CalculatorButton(buttonText: "x", buttonTextColor: Color.white, buttonColor: Color.orange, enumState: Symbols.multiply, viewModel: viewModel)
                 }
                 
                 HStack {
-                    CalculatorButton(buttonText: "4", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "5", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "6", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "-", buttonTextColor: Color.white, buttonColor: Color.orange)
+                    CalculatorButton(buttonText: "4", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.four, viewModel: viewModel)
+                    CalculatorButton(buttonText: "5", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.five, viewModel: viewModel)
+                    CalculatorButton(buttonText: "6", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.six, viewModel: viewModel)
+                    CalculatorButton(buttonText: "-", buttonTextColor: Color.white, buttonColor: Color.orange, enumState: Symbols.minus, viewModel: viewModel)
                 }
                 HStack {
-                    CalculatorButton(buttonText: "1", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "2", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "3", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "+", buttonTextColor: Color.white, buttonColor: Color.orange)
+                    CalculatorButton(buttonText: "1", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.one, viewModel: viewModel)
+                    CalculatorButton(buttonText: "2", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.two, viewModel: viewModel)
+                    CalculatorButton(buttonText: "3", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.three, viewModel: viewModel)
+                    CalculatorButton(buttonText: "+", buttonTextColor: Color.white, buttonColor: Color.orange, enumState: Symbols.plus, viewModel: viewModel)
                 }
-                
+
                 HStack {
-                    
-                    CalculatorButton(buttonText: "0", buttonTextColor: Color.white, buttonColor: Color.black)
+
+                    CalculatorButton(buttonText: "0", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.zero, viewModel: viewModel)
                     //Empty button, needs update
-                    CalculatorButton(buttonText: "", buttonTextColor: Color.white, buttonColor: Color.black)
-                    
-                    CalculatorButton(buttonText: ".", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "=", buttonTextColor: Color.white, buttonColor: Color.orange)
+                    CalculatorButton(buttonText: "", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.zero, viewModel: viewModel)
+
+                    //TODO: Need more cases
+                    CalculatorButton(buttonText: ".", buttonTextColor: Color.white, buttonColor: Color.black, enumState: Symbols.zero, viewModel: viewModel)
+                    CalculatorButton(buttonText: "=", buttonTextColor: Color.white, buttonColor: Color.orange, enumState: Symbols.zero, viewModel: viewModel)
                 }
-                
+
             }
             .padding()
         }

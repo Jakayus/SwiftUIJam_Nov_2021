@@ -13,7 +13,8 @@ struct CalculatorButton: View {
     @State var buttonTextColor: Color
     @State var buttonColor: Color
     
-    //something here
+    @State var enumState: Symbols
+    @ObservedObject var viewModel: CalculatorViewModel
     
     
     var body: some View {
@@ -21,6 +22,8 @@ struct CalculatorButton: View {
             //function call here
             print("button press")
             
+            viewModel.buttonPressed(enumState)
+            print(viewModel.expression)
             
         } ) {
             
@@ -41,8 +44,8 @@ struct CalculatorButton: View {
     
 }
 
-struct CalculatorButton_Previews: PreviewProvider {
-    static var previews: some View {
-        CalculatorButton(buttonText: "test", buttonTextColor: Color.white, buttonColor: Color.orange)
-    }
-}
+//struct CalculatorButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CalculatorButton(buttonText: "test", buttonTextColor: Color.white, buttonColor: Color.orange, enumState: .constant(.one), viewModel: CalculatorViewModel())
+//    }
+//}

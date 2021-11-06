@@ -11,23 +11,6 @@ import Foundation
 
 class CalculatorViewModel: ObservableObject {
     
-    enum Symbols: String {
-        case plus = "+"
-        case minus = "-"
-        case divide = "/"
-        case multiply = "x"
-        case one = "1"
-        case two = "2"
-        case three = "3"
-        case four = "4"
-        case five = "5"
-        case six = "6"
-        case seven = "7"
-        case eight = "8"
-        case nine = "9"
-        case zero = "0"
-    }
-    
     @Published var expression : String = ""
     @Published var answer : String?
     
@@ -38,12 +21,16 @@ class CalculatorViewModel: ObservableObject {
         return false
     }
     
+    //allows button type to be determined
+    var buttonEnumState: Symbols = .one
     
+    //accessing Model
     let expressionCalculator = ExpressionCalculator()
     
     
     func buttonPressed(_ input: Symbols) -> Void {
         
+        //action depending on button type
         switch input {
             
         case .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero:
@@ -55,9 +42,7 @@ class CalculatorViewModel: ObservableObject {
             if expressionCalculator.validate(expression_copy) {
                 expression.append(input.rawValue)
             }
-
         }
-
     }
     
     

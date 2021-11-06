@@ -18,6 +18,7 @@
 		768C23D02735BF7500B1873A /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C23CF2735BF7500B1873A /* CalculatorBrain.swift */; };
 		DC828E2427360370001C58EB /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC828E2327360370001C58EB /* CalculatorView.swift */; };
 		DC828E262736EAB7001C58EB /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC828E252736EAB7001C58EB /* CalculatorViewModel.swift */; };
+		DC828E282736F7A3001C58EB /* EnumData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC828E272736F7A3001C58EB /* EnumData.swift */; };
 		EB57D2B82735C9BA00A76EC9 /* ExpressionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57D2B72735C9BA00A76EC9 /* ExpressionCalculator.swift */; };
 		EB57D2BB2735C9DB00A76EC9 /* Expression in Frameworks */ = {isa = PBXBuildFile; productRef = EB57D2BA2735C9DB00A76EC9 /* Expression */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		768C23CF2735BF7500B1873A /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		DC828E2327360370001C58EB /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		DC828E252736EAB7001C58EB /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		DC828E272736F7A3001C58EB /* EnumData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumData.swift; sourceTree = "<group>"; };
 		EB57D2B72735C9BA00A76EC9 /* ExpressionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				EB57D2B72735C9BA00A76EC9 /* ExpressionCalculator.swift */,
+				DC828E272736F7A3001C58EB /* EnumData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC828E282736F7A3001C58EB /* EnumData.swift in Sources */,
 				DC828E262736EAB7001C58EB /* CalculatorViewModel.swift in Sources */,
 				768C23A32735B79900B1873A /* ContentView.swift in Sources */,
 				768C23CC2735BF2F00B1873A /* CalculatorButton.swift in Sources */,
