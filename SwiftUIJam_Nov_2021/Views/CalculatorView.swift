@@ -9,8 +9,11 @@ import SwiftUI
 
 struct CalculatorView: View {
     
+    //MARK: - Properties
+    
     let data = (1...12).map {"Button \($0)"} //Grid must count data items
     
+    //grid properties
     let columns = [
         GridItem(.flexible(), spacing: 20),
         GridItem(.flexible(), spacing: 20),
@@ -18,11 +21,11 @@ struct CalculatorView: View {
         GridItem(.flexible(), spacing: 20)
     ]
     
-    
+    //MARK: - View
     var body: some View {
         
         VStack {
-            //DisplayView expected to replace this ZStack
+            //TODO: DisplayView expected to replace this ZStack
             ZStack {
                 RoundedRectangle(cornerRadius: 3.0)
                     .frame(height: UIScreen.main.bounds.height / 5)
@@ -30,21 +33,28 @@ struct CalculatorView: View {
                     .foregroundColor(Color.blue)
                 Text("Display Area")
                     .foregroundColor(.primary)
-            }.layoutPriority(1)
+                    .font(.title)
+            }
             
             LazyVGrid (columns: columns, spacing: 20)
             {
                 ForEach(data, id: \.self) { item in
                     CalculatorButton()
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: UIScreen.main.bounds.height/30, maxHeight: .infinity)
+                        //.frame(maxHeight: .infinity)
+                        //.frame(minWidth: 0, maxWidth: .infinity, minHeight: UIScreen.main.bounds.height/30, maxHeight: .infinity)
                 }
             }
             .padding(.horizontal)
+            .frame(
+                maxHeight: .infinity)
         }
+        .frame(
+            maxWidth: .infinity,
+            maxHeight: .infinity,
+            alignment: .topLeading
+        )
         
-        
-        
-    }
+    }// end CalculatorView
 }
 
 struct CalculatorView_Previews: PreviewProvider {

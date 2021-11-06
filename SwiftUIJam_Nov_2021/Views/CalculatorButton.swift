@@ -15,13 +15,15 @@ struct CalculatorButton: View {
             print("button press")
         } ) {
                 Image(systemName: "lessthan.circle.fill")
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .foregroundColor(.primary)
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .foregroundColor(.primary)
         }
-        .background(
-            RoundedRectangle(cornerRadius: 3.0)
-                .stroke(Color.blue, lineWidth: 3.0)
-        )
+        //.background(
+        //    RoundedRectangle(cornerRadius: 3.0)
+        //        .stroke(Color.blue, lineWidth: 3.0)
+        //)
     }//end CalculatorButton View
     
 }
