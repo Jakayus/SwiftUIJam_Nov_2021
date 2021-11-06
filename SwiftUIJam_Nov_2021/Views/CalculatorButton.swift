@@ -13,10 +13,15 @@ struct CalculatorButton: View {
     @State var buttonTextColor: Color
     @State var buttonColor: Color
     
+    //something here
+    
+    
     var body: some View {
         Button(action: {
             //function call here
             print("button press")
+            
+            
         } ) {
             
             //Geometry reader used to allow Text to change based on landscape or portrait
