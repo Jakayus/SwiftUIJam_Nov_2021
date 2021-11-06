@@ -59,13 +59,6 @@ struct CalculatorView_Previews: PreviewProvider {
     }
 }
 
-
-struct testView: View {
-    var body: some View {
-        Text("test")
-    }
-}
-
 struct TempDisplayView: View {
     var body: some View {
         ZStack {
