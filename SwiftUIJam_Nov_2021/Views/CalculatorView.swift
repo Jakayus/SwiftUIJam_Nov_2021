@@ -40,19 +40,12 @@ struct CalculatorView: View {
             {
                 ForEach(data, id: \.self) { item in
                     CalculatorButton()
-                        //.frame(maxHeight: .infinity)
-                        //.frame(minWidth: 0, maxWidth: .infinity, minHeight: UIScreen.main.bounds.height/30, maxHeight: .infinity)
                 }
             }
             .padding(.horizontal)
             .frame(
                 maxHeight: .infinity)
         }
-        .frame(
-            maxWidth: .infinity,
-            maxHeight: .infinity,
-            alignment: .topLeading
-        )
         
     }// end CalculatorView
 }

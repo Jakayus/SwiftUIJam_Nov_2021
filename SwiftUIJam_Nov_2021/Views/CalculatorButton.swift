@@ -20,10 +20,7 @@ struct CalculatorButton: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .foregroundColor(.primary)
         }
-        //.background(
-        //    RoundedRectangle(cornerRadius: 3.0)
-        //        .stroke(Color.blue, lineWidth: 3.0)
-        //)
+
     }//end CalculatorButton View
     
 }
