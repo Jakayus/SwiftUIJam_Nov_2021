@@ -25,16 +25,7 @@ struct CalculatorView: View {
     var body: some View {
         
         VStack {
-            //TODO: DisplayView expected to replace this ZStack
-            ZStack {
-                RoundedRectangle(cornerRadius: 3.0)
-                    .frame(height: UIScreen.main.bounds.height / 5)
-                    .padding(.horizontal)
-                    .foregroundColor(Color.blue)
-                Text("Display Area")
-                    .foregroundColor(.primary)
-                    .font(.title)
-            }
+            TempDisplayView() //TODO: create real DisplayView
             
             LazyVGrid (columns: columns, spacing: 20)
             {
@@ -60,5 +51,19 @@ struct CalculatorView_Previews: PreviewProvider {
 struct testView: View {
     var body: some View {
         Text("test")
+    }
+}
+
+struct TempDisplayView: View {
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 3.0)
+                .frame(height: UIScreen.main.bounds.height / 5)
+                .padding(.horizontal)
+                .foregroundColor(Color.blue)
+            Text("Display Area")
+                .foregroundColor(.primary)
+                .font(.title)
+        }
     }
 }
