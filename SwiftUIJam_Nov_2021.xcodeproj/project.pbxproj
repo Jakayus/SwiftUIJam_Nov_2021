@@ -16,6 +16,7 @@
 		768C23BE2735B79D00B1873A /* SwiftUIJam_Nov_2021UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C23BD2735B79D00B1873A /* SwiftUIJam_Nov_2021UITestsLaunchTests.swift */; };
 		768C23CC2735BF2F00B1873A /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C23CB2735BF2F00B1873A /* CalculatorButton.swift */; };
 		768C23D02735BF7500B1873A /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C23CF2735BF7500B1873A /* CalculatorBrain.swift */; };
+		DC828E2427360370001C58EB /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC828E2327360370001C58EB /* CalculatorView.swift */; };
 		EB57D2B82735C9BA00A76EC9 /* ExpressionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57D2B72735C9BA00A76EC9 /* ExpressionCalculator.swift */; };
 		EB57D2BB2735C9DB00A76EC9 /* Expression in Frameworks */ = {isa = PBXBuildFile; productRef = EB57D2BA2735C9DB00A76EC9 /* Expression */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		768C23BD2735B79D00B1873A /* SwiftUIJam_Nov_2021UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIJam_Nov_2021UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		768C23CB2735BF2F00B1873A /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		768C23CF2735BF7500B1873A /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		DC828E2327360370001C58EB /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		EB57D2B72735C9BA00A76EC9 /* ExpressionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				768C23CB2735BF2F00B1873A /* CalculatorButton.swift */,
+				DC828E2327360370001C58EB /* CalculatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				768C23CC2735BF2F00B1873A /* CalculatorButton.swift in Sources */,
 				768C23D02735BF7500B1873A /* CalculatorBrain.swift in Sources */,
 				EB57D2B82735C9BA00A76EC9 /* ExpressionCalculator.swift in Sources */,
+				DC828E2427360370001C58EB /* CalculatorView.swift in Sources */,
 				768C23A12735B79900B1873A /* SwiftUIJam_Nov_2021App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIJam_Nov_2021/Preview Content\"";
-				DEVELOPMENT_TEAM = E2D87XL9X7;
+				DEVELOPMENT_TEAM = 97BFAG7885;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -493,7 +497,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIJam_Nov_2021/Preview Content\"";
-				DEVELOPMENT_TEAM = E2D87XL9X7;
+				DEVELOPMENT_TEAM = 97BFAG7885;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
