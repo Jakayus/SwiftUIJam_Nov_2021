@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct CalculatorButton: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            
+        } ) {
+            Image(systemName: "lessthan.circle.fill")
+                .foregroundColor(.white)
+                .padding()
+        }
+        .background(RoundedRectangle(cornerRadius: 3.0))
+        .foregroundColor(.orange)
+        
     }
 }
 
