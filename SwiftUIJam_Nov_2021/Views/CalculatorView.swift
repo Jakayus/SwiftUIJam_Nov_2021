@@ -20,7 +20,7 @@ struct CalculatorView: View {
                     CalculatorButton(buttonText: "7", buttonTextColor: Color.white, buttonColor: Color.black)
                     CalculatorButton(buttonText: "8", buttonTextColor: Color.white, buttonColor: Color.black)
                     CalculatorButton(buttonText: "9", buttonTextColor: Color.white, buttonColor: Color.black)
-                    CalculatorButton(buttonText: "X", buttonTextColor: Color.white, buttonColor: Color.orange)
+                    CalculatorButton(buttonText: "x", buttonTextColor: Color.white, buttonColor: Color.orange)
                 }
                 
                 HStack {
