@@ -15,8 +15,7 @@ struct CalculatorView: View {
     var body: some View {
         
         VStack {
-            TempDisplayView() //TODO: create real DisplayView
-            
+            DisplayView(expression: viewModel.expression, answer: viewModel.answer, errorMessage: viewModel.errorMessage, cursorIndex: $viewModel.cursorIndex)
             VStack {
                 
                 HStack {

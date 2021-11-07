@@ -13,6 +13,8 @@ class CalculatorViewModel: ObservableObject {
     
     @Published var expression : String = ""
     @Published var answer : String?
+    @Published var errorMessage: String?
+    @Published var cursorIndex: Int = 0
     
     var lastDigitIsNumber: Bool {
         if let last = expression.last {
@@ -32,18 +34,37 @@ class CalculatorViewModel: ObservableObject {
         
         //action depending on button type
         switch input {
-            
         case .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero:
-            expression.append(input.rawValue)
+            writeToExpression(str: input.rawValue)
             
         case .plus, .minus, .multiply, .divide:
-            var expression_copy = expression
-            expression_copy.append(input.rawValue)
-            if expressionCalculator.validate(expression_copy) {
-                expression.append(input.rawValue)
+            //No babysitting, the user will be able to enter an invalid expression and get an error. We could try to babysit, but I think it would take too much time to get right.
+            writeToExpression(str: input.rawValue)
+        }
+        
+        updateAnswer()
+    }
+    
+    private func writeToExpression(str: String) {
+        var expressionArray = expression.map{$0}
+        let strArray = str.map{$0}
+        //To make sure it doesn't insert out of bounds
+        cursorIndex = min(expression.count, cursorIndex)
+        expressionArray.insert(contentsOf: strArray, at: cursorIndex)
+        expression = String(expressionArray)
+        //Probably redundant
+        cursorIndex = min(expression.count, cursorIndex + 1)
+    }
+    
+    private func updateAnswer() {
+        do {
+            answer = try expressionCalculator.evaluate(expression)
+            errorMessage = nil
+        } catch  {
+            if let error = error as? ExpressionError {
+                answer = nil
+                errorMessage = error.description
             }
         }
     }
-    
-    
 }

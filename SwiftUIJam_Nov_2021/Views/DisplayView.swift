@@ -31,6 +31,10 @@ struct DisplayView: View {
             Spacer()
             if let answer = answer {
                 Text("\(answer)")
+                    .lineLimit(1)
+                    .minimumScaleFactor(1)
+                    .truncationMode(.tail)
+                    .padding(.leading, 16)
             }
         }
         .font(.system(size: 42, weight: .medium, design: .monospaced))
@@ -39,6 +43,7 @@ struct DisplayView: View {
             //The view will not be visible when errorMessage is nil
             DisplayErrorView(errorMessage: errorMessage)
                 .alignment(.topTrailing)
+                
         )
 
 

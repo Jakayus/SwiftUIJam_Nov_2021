@@ -8,6 +8,7 @@
 import Foundation
 import Expression
 
+typealias ExpressionError = Expression.Error
 struct ExpressionCalculator {
     ///Evaluates the expression and returns the answer as a cleaned up string.
     func evaluate(_ str: String) throws -> String {
