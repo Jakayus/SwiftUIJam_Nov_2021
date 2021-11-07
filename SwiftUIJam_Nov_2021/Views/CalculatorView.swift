@@ -18,6 +18,14 @@ struct CalculatorView: View {
             TempDisplayView() //TODO: create real DisplayView
             
             VStack {
+                
+                HStack {
+                    CalculatorButton(buttonText: "", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.seven, viewModel: viewModel)
+                    CalculatorButton(buttonText: ".", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.eight, viewModel: viewModel)
+                    CalculatorButton(buttonText: ".", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.nine,viewModel: viewModel)
+                    CalculatorButton(buttonText: ".", buttonTextColor: Color.white, buttonColor: Color.orange, buttonSymbol: Symbols.multiply, viewModel: viewModel)
+                }
+                
                 HStack {
                     CalculatorButton(buttonText: "7", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.seven, viewModel: viewModel)
                     CalculatorButton(buttonText: "8", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.eight, viewModel: viewModel)
