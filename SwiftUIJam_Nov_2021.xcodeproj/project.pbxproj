@@ -21,7 +21,7 @@
 		EB80459B2736CFAB00ED64CA /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80459A2736CFAB00ED64CA /* DisplayView.swift */; };
 		EB80459D27380DCD00ED64CA /* DisplayErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80459C27380DCD00ED64CA /* DisplayErrorView.swift */; };
 		EB8045A02738179400ED64CA /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80459F2738179300ED64CA /* RoundedCorner.swift */; };
-		EB8045A2273818F600ED64CA /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8045A1273818F600ED64CA /* Alignment.swift */; };
+		EB8045A42738384B00ED64CA /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8045A32738384B00ED64CA /* Alignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		EB80459A2736CFAB00ED64CA /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		EB80459C27380DCD00ED64CA /* DisplayErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayErrorView.swift; sourceTree = "<group>"; };
 		EB80459F2738179300ED64CA /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
-		EB8045A1273818F600ED64CA /* Alignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alignment.swift; path = ../../../../../SwiftProjects/NRKDownload/Shared/Views/Helpers/Alignment.swift; sourceTree = "<group>"; };
+		EB8045A32738384B00ED64CA /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				EB80459F2738179300ED64CA /* RoundedCorner.swift */,
-				EB8045A1273818F600ED64CA /* Alignment.swift */,
+				EB8045A32738384B00ED64CA /* Alignment.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB8045A02738179400ED64CA /* RoundedCorner.swift in Sources */,
-				EB8045A2273818F600ED64CA /* Alignment.swift in Sources */,
+				EB8045A42738384B00ED64CA /* Alignment.swift in Sources */,
 				768C23A32735B79900B1873A /* ContentView.swift in Sources */,
 				768C23CC2735BF2F00B1873A /* CalculatorButton.swift in Sources */,
 				768C23D02735BF7500B1873A /* CalculatorBrain.swift in Sources */,
