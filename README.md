@@ -6,6 +6,6 @@ A SwiftUI iPad calculator with realtime results
 * Addition, Subtraction, Multiplication, Division 
 *  *Realtime* results!
 *  Backspace key
-*  And a 🧦 Key too, great for winter!
+*  And a 🧦 key too, great for winter!
 
 
