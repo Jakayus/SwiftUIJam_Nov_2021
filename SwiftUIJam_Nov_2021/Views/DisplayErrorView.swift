@@ -9,19 +9,28 @@ import SwiftUI
 
 struct DisplayErrorView: View {
     var errorMessage: String?
-    
+    @State private var showingWholeMessage = true
     var body: some View {
         if let errorMessage = errorMessage {
             HStack{
                 Image(systemName: "exclamationmark.circle.fill")
                     .background(Circle().foregroundColor(.primary))
                     .foregroundColor(.red)
-                Text(errorMessage)
+                    .onTapGesture {
+                        withAnimation(.easeInOut) {
+                            showingWholeMessage.toggle()
+                        }
+                    }
+                if showingWholeMessage {
+                    Text(errorMessage)
+                }
             }
+            
             .padding(8)
             .background(
                 Color.red.brightness(0.4)
                     .cornerRadius(16, corners: .bottomLeft)
+                    .transition(.move(edge: .trailing))
             )
             .transition(.move(edge: .top))
         } else {
