@@ -52,7 +52,7 @@ struct CalculatorView: View {
                     //Empty button, needs update
                     CalculatorButton(buttonText: "🧦", buttonTextColor: .white, buttonSymbol: Symbols.zero, viewModel: viewModel)
                     //TODO: Need more cases
-                    CalculatorButton(buttonText: ".", buttonTextColor: .white, buttonSymbol: Symbols.zero, viewModel: viewModel)
+                    CalculatorButton(buttonText: ".", buttonTextColor: .white, buttonSymbol: Symbols.decimal, viewModel: viewModel)
                     CalculatorButton(buttonText: "=", buttonTextColor: .white, buttonColor: .orange, buttonSymbol: Symbols.equals, viewModel: viewModel)
                 }
                 

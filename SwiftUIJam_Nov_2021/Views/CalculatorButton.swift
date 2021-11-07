@@ -45,7 +45,7 @@ var buttonSymbol: Symbols?
         }.alert(isPresented:$showingAlert) {
             Alert(
                 title: Text("Important message"),
-                message: Text(#"Wear 🧦 in winter, you may find an iPad Calculator App in them. ¯\_(ツ)_/¯"#),
+                message: Text(#"Wear 🧦 in winter, you may find an iPad Calculator App in them ¯\\_(ツ)_/¯"#),
                 dismissButton: .default(Text("Got it!"))
             )
         }
