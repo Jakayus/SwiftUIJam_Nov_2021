@@ -18,6 +18,7 @@
 		768C23D02735BF7500B1873A /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C23CF2735BF7500B1873A /* CalculatorBrain.swift */; };
 		EB57D2B82735C9BA00A76EC9 /* ExpressionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57D2B72735C9BA00A76EC9 /* ExpressionCalculator.swift */; };
 		EB57D2BB2735C9DB00A76EC9 /* Expression in Frameworks */ = {isa = PBXBuildFile; productRef = EB57D2BA2735C9DB00A76EC9 /* Expression */; };
+		EB80459B2736CFAB00ED64CA /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80459A2736CFAB00ED64CA /* DisplayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		768C23CB2735BF2F00B1873A /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		768C23CF2735BF7500B1873A /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		EB57D2B72735C9BA00A76EC9 /* ExpressionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionCalculator.swift; sourceTree = "<group>"; };
+		EB80459A2736CFAB00ED64CA /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				768C23CB2735BF2F00B1873A /* CalculatorButton.swift */,
+				EB80459A2736CFAB00ED64CA /* DisplayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				768C23A32735B79900B1873A /* ContentView.swift in Sources */,
 				768C23CC2735BF2F00B1873A /* CalculatorButton.swift in Sources */,
 				768C23D02735BF7500B1873A /* CalculatorBrain.swift in Sources */,
+				EB80459B2736CFAB00ED64CA /* DisplayView.swift in Sources */,
 				EB57D2B82735C9BA00A76EC9 /* ExpressionCalculator.swift in Sources */,
 				768C23A12735B79900B1873A /* SwiftUIJam_Nov_2021App.swift in Sources */,
 			);
