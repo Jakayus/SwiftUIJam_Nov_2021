@@ -34,10 +34,13 @@ class CalculatorBrains: ObservableObject {
         switch input {
         case .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero:
             writeToExpression(str: input.rawValue)
-            
-        case .plus, .minus, .multiply:
+        case .decimal:
+            print("TODO: ")
+        case .plus, .minus:
             //No babysitting, the user will be able to enter an invalid expression and get an error. We could try to babysit, but I think it would take too much time to get right.
             writeToExpression(str: input.rawValue)
+        case .multiply:
+            writeToExpression(str: "*")
         case .divide:
             writeToExpression(str: "/")
         // FIXME: All clear and backspace are not working as expected, Please look into it.

@@ -24,6 +24,7 @@ enum Symbols: String {
     case eight = "8"
     case nine = "9"
     case zero = "0"
+    case decimal = "."
     case allClear = "AC"
     case backspace = "⬅"
 }
