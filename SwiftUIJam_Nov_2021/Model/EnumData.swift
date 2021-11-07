@@ -27,4 +27,5 @@ enum Symbols: String {
     case decimal = "."
     case allClear = "AC"
     case backspace = "⬅"
+    case equals = "="
 }

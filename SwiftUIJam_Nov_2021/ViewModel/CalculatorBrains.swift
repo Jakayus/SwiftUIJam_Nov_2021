@@ -13,6 +13,7 @@ class CalculatorBrains: ObservableObject {
     @Published var answer : String?
     @Published var errorMessage: String?
     @Published var cursorIndex: Int = 0
+    @Published var focusingAnswer = false
     
     var lastDigitIsNumber: Bool {
         if let last = expression.last {
@@ -35,7 +36,7 @@ class CalculatorBrains: ObservableObject {
         case .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero:
             writeToExpression(str: input.rawValue)
         case .decimal:
-            print("TODO: ")
+            writeToExpression(str: ".")
         case .plus, .minus:
             //No babysitting, the user will be able to enter an invalid expression and get an error. We could try to babysit, but I think it would take too much time to get right.
             writeToExpression(str: input.rawValue)
@@ -46,10 +47,22 @@ class CalculatorBrains: ObservableObject {
         // FIXME: All clear and backspace are not working as expected, Please look into it.
         case .allClear:
             expression = ""
+            cursorIndex = 0
         case .backspace:
-            expression = String(expression.removeLast())
+            if expression != "" {
+                let removeIndex = max(0, cursorIndex - 1)
+                var newExpressionArray = expression.map{$0}
+                newExpressionArray.remove(at: removeIndex)
+                expression = String(newExpressionArray)
+                cursorIndex = removeIndex
+            }
+        case .equals:
+            focusingAnswer = true
         }
         
+        if input != .equals {
+            focusingAnswer = false
+        }
         
         updateAnswer()
     }

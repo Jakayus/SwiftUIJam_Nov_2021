@@ -15,7 +15,7 @@ struct CalculatorView: View {
     var body: some View {
         
         VStack {
-            DisplayView(expression: viewModel.expression, answer: viewModel.answer, errorMessage: viewModel.errorMessage, cursorIndex: $viewModel.cursorIndex)
+            DisplayView(expression: viewModel.expression, answer: viewModel.answer, errorMessage: viewModel.errorMessage, focusingAnswer: $viewModel.focusingAnswer, cursorIndex: $viewModel.cursorIndex)
             VStack {
                 
                 HStack {
@@ -53,7 +53,7 @@ struct CalculatorView: View {
                     CalculatorButton(buttonText: "🧦", buttonTextColor: .white, buttonSymbol: Symbols.zero, viewModel: viewModel)
                     //TODO: Need more cases
                     CalculatorButton(buttonText: ".", buttonTextColor: .white, buttonSymbol: Symbols.zero, viewModel: viewModel)
-                    CalculatorButton(buttonText: "=", buttonTextColor: .white, buttonColor: .orange, buttonSymbol: Symbols.zero, viewModel: viewModel)
+                    CalculatorButton(buttonText: "=", buttonTextColor: .white, buttonColor: .orange, buttonSymbol: Symbols.equals, viewModel: viewModel)
                 }
                 
             }
