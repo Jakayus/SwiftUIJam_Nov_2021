@@ -10,6 +10,7 @@ import SwiftUI
 struct DisplayView: View {
     var expression: String
     var answer: String?
+    var errorMessage: String?
     @Binding var cursorIndex: Int
     @State private var displayPressed = false
     @State var cursorOpacity: CGFloat = 1
@@ -61,6 +62,11 @@ struct DisplayView: View {
             }
         }
         .font(.system(size: 42, weight: .medium, design: .monospaced))
+        .padding()
+        .overlay(
+            DisplayErrorView(errorMessage: errorMessage)
+                .alignment(.topTrailing)
+        )
 
     }
 }
@@ -68,7 +74,7 @@ struct DisplayView: View {
 fileprivate struct Wrapper: View {
     @State var cursorIndex = 3
     var body: some View {
-        DisplayView(expression: "1+1*3-sqrt(2)", answer: "4", cursorIndex: $cursorIndex)
+        DisplayView(expression: "1+1*3-sqrt(2)", answer: "4",errorMessage: "Couldn't find operator '&'", cursorIndex: $cursorIndex)
     }
 }
 
