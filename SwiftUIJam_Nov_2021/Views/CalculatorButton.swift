@@ -13,7 +13,7 @@ struct CalculatorButton: View {
     let buttonTextColor: Color
     var buttonColor = Color("NumericButtonBackgrounColour")
     
-    var buttonSymbol: Symbols?
+var buttonSymbol: Symbols?
     @ObservedObject var viewModel: CalculatorBrains
     
     @State private var showingAlert = false

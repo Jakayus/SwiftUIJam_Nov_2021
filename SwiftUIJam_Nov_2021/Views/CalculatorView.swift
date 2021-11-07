@@ -19,11 +19,11 @@ struct CalculatorView: View {
             VStack {
                 
                 HStack {
-                    CalculatorButton(buttonText: "AC", buttonTextColor: .white,  buttonSymbol: Symbols.seven, viewModel: viewModel)
-                    CalculatorButton(buttonText: "C", buttonTextColor: .white,  buttonSymbol: Symbols.eight, viewModel: viewModel)
+                    CalculatorButton(buttonText: "AC", buttonTextColor: .white,  buttonSymbol: Symbols.allClear, viewModel: viewModel)
+                    CalculatorButton(buttonText: "⃪", buttonTextColor: .white,  buttonSymbol: Symbols.backspace, viewModel: viewModel)
                     CalculatorButton(buttonText: "", buttonTextColor: .white, buttonColor:.clear, viewModel: viewModel)
                         .disabled(true)
-                    CalculatorButton(buttonText: "÷", buttonTextColor: .white, buttonColor: .orange, buttonSymbol: Symbols.multiply, viewModel: viewModel)
+                    CalculatorButton(buttonText: "÷", buttonTextColor: .white, buttonColor: .orange, buttonSymbol: Symbols.divide, viewModel: viewModel)
                 }
                 
                 HStack {
