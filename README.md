@@ -15,5 +15,5 @@ A SwiftUI iPad calculator with realtime activity
 
 **A simple way to see the realtime feature is to type in "1+2222". See the calculation adjust as you type in more digits!**
 
-### This project was created as part of SwiftUIJam Nov 2021
+### This project was created as part of SwiftUIJam November 2021
 Any continued work will be located on a repository forked from this one. This was an attempt to make a working calculator for iPad using SwiftUI. A realtime calculation effect adds some uniqeness.
