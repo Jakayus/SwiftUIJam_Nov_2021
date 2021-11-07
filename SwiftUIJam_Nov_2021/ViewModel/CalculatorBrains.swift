@@ -1,5 +1,5 @@
 //
-//  CalculatorViewModel.swift
+//  CalculatorBrains.swift
 //  SwiftUIJam_Nov_2021
 //
 //  Created by Joel Sereno on 11/6/21.
@@ -7,9 +7,7 @@
 
 import Foundation
 
-
-
-class CalculatorViewModel: ObservableObject {
+class CalculatorBrains: ObservableObject {
     
     @Published var expression : String = ""
     @Published var answer : String?

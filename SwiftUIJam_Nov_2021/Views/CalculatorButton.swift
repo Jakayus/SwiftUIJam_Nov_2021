@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CalculatorButton: View {
     
-    @State var buttonText: String
-    @State var buttonTextColor: Color
+    let buttonText: String
+    let buttonTextColor: Color
     var buttonColor = Color("NumericButtonBackgrounColour")
     
-    @State var buttonSymbol: Symbols
-    @ObservedObject var viewModel: CalculatorViewModel
+    var buttonSymbol: Symbols?
+    @ObservedObject var viewModel: CalculatorBrains
     
     @State private var showingAlert = false
     
@@ -25,7 +25,7 @@ struct CalculatorButton: View {
             if buttonText == "🧦" {
                 showingAlert = true
             } else {
-                viewModel.buttonPressed(buttonSymbol)
+                viewModel.buttonPressed(buttonSymbol!)
             }
             print(viewModel.expression)
             
@@ -56,6 +56,6 @@ struct CalculatorButton: View {
 
 struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButton(buttonText: "test", buttonTextColor: Color.white, buttonColor: Color.orange, buttonSymbol: Symbols.one, viewModel: CalculatorViewModel())
+        CalculatorButton(buttonText: "test", buttonTextColor: Color.white, buttonColor: .orange, buttonSymbol: Symbols.one, viewModel: CalculatorBrains())
     }
 }
