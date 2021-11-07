@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CalculatorView: View {
-          
+    
     @ObservedObject var viewModel = CalculatorViewModel()
     
     //MARK: - View
@@ -19,36 +19,35 @@ struct CalculatorView: View {
             
             VStack {
                 HStack {
-                    CalculatorButton(buttonText: "7", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.seven, viewModel: viewModel)
-                    CalculatorButton(buttonText: "8", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.eight, viewModel: viewModel)
-                    CalculatorButton(buttonText: "9", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.nine,viewModel: viewModel)
-                    CalculatorButton(buttonText: "x", buttonTextColor: Color.white, buttonColor: Color.orange, buttonSymbol: Symbols.multiply, viewModel: viewModel)
+                    CalculatorButton(buttonText: "7", buttonTextColor: Color.white, buttonSymbol: Symbols.seven, viewModel: viewModel)
+                    CalculatorButton(buttonText: "8", buttonTextColor: Color.white, buttonSymbol: Symbols.eight, viewModel: viewModel)
+                    CalculatorButton(buttonText: "9", buttonTextColor: Color.white, buttonSymbol: Symbols.nine,viewModel: viewModel)
+                    CalculatorButton(buttonText: "×", buttonTextColor: Color.white, buttonColor: Color.orange, buttonSymbol: Symbols.multiply, viewModel: viewModel)
                 }
                 
                 HStack {
-                    CalculatorButton(buttonText: "4", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.four, viewModel: viewModel)
-                    CalculatorButton(buttonText: "5", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.five, viewModel: viewModel)
-                    CalculatorButton(buttonText: "6", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.six, viewModel: viewModel)
+                    CalculatorButton(buttonText: "4", buttonTextColor: Color.white, buttonSymbol: Symbols.four, viewModel: viewModel)
+                    CalculatorButton(buttonText: "5", buttonTextColor: Color.white, buttonSymbol: Symbols.five, viewModel: viewModel)
+                    CalculatorButton(buttonText: "6", buttonTextColor: Color.white, buttonSymbol: Symbols.six, viewModel: viewModel)
                     CalculatorButton(buttonText: "-", buttonTextColor: Color.white, buttonColor: Color.orange, buttonSymbol: Symbols.minus, viewModel: viewModel)
                 }
                 HStack {
-                    CalculatorButton(buttonText: "1", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.one, viewModel: viewModel)
-                    CalculatorButton(buttonText: "2", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.two, viewModel: viewModel)
-                    CalculatorButton(buttonText: "3", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.three, viewModel: viewModel)
+                    CalculatorButton(buttonText: "1", buttonTextColor: Color.white, buttonSymbol: Symbols.one, viewModel: viewModel)
+                    CalculatorButton(buttonText: "2", buttonTextColor: Color.white, buttonSymbol: Symbols.two, viewModel: viewModel)
+                    CalculatorButton(buttonText: "3", buttonTextColor: Color.white, buttonSymbol: Symbols.three, viewModel: viewModel)
                     CalculatorButton(buttonText: "+", buttonTextColor: Color.white, buttonColor: Color.orange, buttonSymbol: Symbols.plus, viewModel: viewModel)
                 }
-
+                
                 HStack {
-
-                    CalculatorButton(buttonText: "0", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.zero, viewModel: viewModel)
+                    
+                    CalculatorButton(buttonText: "0", buttonTextColor: Color.white, buttonSymbol: Symbols.zero, viewModel: viewModel)
                     //Empty button, needs update
-                    CalculatorButton(buttonText: "", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.zero, viewModel: viewModel)
-
+                    CalculatorButton(buttonText: "🧦", buttonTextColor: Color.white, buttonSymbol: Symbols.zero, viewModel: viewModel)
                     //TODO: Need more cases
-                    CalculatorButton(buttonText: ".", buttonTextColor: Color.white, buttonColor: Color.black, buttonSymbol: Symbols.zero, viewModel: viewModel)
+                    CalculatorButton(buttonText: ".", buttonTextColor: Color.white, buttonSymbol: Symbols.zero, viewModel: viewModel)
                     CalculatorButton(buttonText: "=", buttonTextColor: Color.white, buttonColor: Color.orange, buttonSymbol: Symbols.zero, viewModel: viewModel)
                 }
-
+                
             }
             .padding()
         }
