@@ -8,13 +8,44 @@
 import SwiftUI
 
 struct CalculatorButton: View {
+    
+    @State var buttonText: String
+    @State var buttonTextColor: Color
+    @State var buttonColor: Color
+    
+    @State var buttonSymbol: Symbols
+    @ObservedObject var viewModel: CalculatorViewModel
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        Button(action: {
+            //function call here
+            print("button press")
+            
+            viewModel.buttonPressed(buttonSymbol)
+            print(viewModel.expression)
+            
+        } ) {
+            
+            //Geometry reader used to allow Text to change based on landscape or portrait
+            GeometryReader { geo in
+                ZStack {
+                    RoundedRectangle(cornerRadius: 2.0)
+                        .foregroundColor(buttonColor)
+                    Text("\(buttonText)")
+                        .font(.system(size: geo.size.height > geo.size.width ? geo.size.width * 0.4 : geo.size.height * 0.4 ))
+                        .foregroundColor(buttonTextColor)
+                }
+            }
+                
+        }
+
+    }//end CalculatorButton View
+    
 }
 
 struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButton()
+        CalculatorButton(buttonText: "test", buttonTextColor: Color.white, buttonColor: Color.orange, buttonSymbol: Symbols.one, viewModel: CalculatorViewModel())
     }
 }
