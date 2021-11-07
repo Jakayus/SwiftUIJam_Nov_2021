@@ -12,33 +12,49 @@ struct DisplayView: View {
     var expression: String
     var answer: String?
     var errorMessage: String?
+    @Binding var focusingAnswer: Bool
     @Binding var cursorIndex: Int
     @State private var displayPressed = false
     @State private var cursorOpacity: CGFloat = 1
     @State private var cursorAnimating = true
     @State private var animationStartTask: Task = Task{}
     var body: some View {
-        HStack {
+        VStack(alignment: .leading) {
             //An empty expression messed with the height of the cursor
             Text(expression != "" ? expression : " ")
-                .font(.system(size: 42, weight: .medium, design: .monospaced))
+                .font(.system(size: focusingAnswer ? 32 : 62, weight: .medium, design: .monospaced))
                 .lineLimit(1)
                 .minimumScaleFactor(0.3)
                 .truncationMode(.head)
                 .overlay(
                     cursor
                 )
-            Spacer()
-            if let answer = answer {
-                Text("\(answer)")
+                .alignment(.leading)
+                .animation(.easeInOut, value: focusingAnswer)
+                
+            HStack(spacing: 0) {
+                Text("= ")
+                if let answer = answer {
+                    Text("\(answer)")
+                }
             }
+            .lineLimit(1)
+            .minimumScaleFactor(1)
+            .truncationMode(.tail)
+            .font(.system(size: focusingAnswer ? 62 : 32, weight: .medium, design: .monospaced))
+            .opacity(focusingAnswer ? 1 : 0.5)
+            .alignment(.leading)
+            .animation(.easeInOut, value: focusingAnswer)
+            
         }
-        .font(.system(size: 42, weight: .medium, design: .monospaced))
+        
         .padding()
         .overlay(
             //The view will not be visible when errorMessage is nil
-            DisplayErrorView(errorMessage: errorMessage)
-                .alignment(.topTrailing)
+
+            DisplayErrorView(errorMessage: focusingAnswer ? errorMessage : nil)
+                    .alignment(.topTrailing)
+
         )
 
 
@@ -67,6 +83,7 @@ struct DisplayView: View {
                 //Gesture to move the cursor
                 DragGesture(minimumDistance: 0, coordinateSpace: .named("expressionDisplay"))
                     .onChanged({ offset in
+                        focusingAnswer = false
                         displayPressed = true
                         calculateCursorIndex(proxy: proxy, offset: offset)
                     })
@@ -127,8 +144,15 @@ struct DisplayView: View {
 @available(iOS 15.0, *)
 fileprivate struct Wrapper: View {
     @State var cursorIndex = 3
+    @State var focusingAnswer: Bool = true
     var body: some View {
-        DisplayView(expression: " ", answer: "4",errorMessage: "Couldn't find operator '&'", cursorIndex: $cursorIndex)
+        VStack {
+            DisplayView(expression: "1+3", answer: "4",errorMessage: "Couldn't find operator '&'", focusingAnswer: $focusingAnswer, cursorIndex: $cursorIndex)
+            Button("hdhfs", action: {
+                focusingAnswer.toggle()
+            })
+        }
+        
     }
 }
 

@@ -9,43 +9,53 @@ import SwiftUI
 
 struct CalculatorButton: View {
     
-    @State var buttonText: String
-    @State var buttonTextColor: Color
-    @State var buttonColor: Color
+    let buttonText: String
+    let buttonTextColor: Color
+    var buttonColor = Color("NumericButtonBackgrounColour")
     
-    @State var buttonSymbol: Symbols
-    @ObservedObject var viewModel: CalculatorViewModel
+var buttonSymbol: Symbols?
+    @ObservedObject var viewModel: CalculatorBrains
     
+    @State private var showingAlert = false
     
     var body: some View {
         Button(action: {
             //function call here
             print("button press")
-            
-            viewModel.buttonPressed(buttonSymbol)
+            if buttonText == "🧦" {
+                showingAlert = true
+            } else {
+                viewModel.buttonPressed(buttonSymbol!)
+            }
             print(viewModel.expression)
             
-        } ) {
+        }) {
             
             //Geometry reader used to allow Text to change based on landscape or portrait
             GeometryReader { geo in
                 ZStack {
-                    RoundedRectangle(cornerRadius: 2.0)
+                    RoundedRectangle(cornerRadius: 20)
                         .foregroundColor(buttonColor)
                     Text("\(buttonText)")
                         .font(.system(size: geo.size.height > geo.size.width ? geo.size.width * 0.4 : geo.size.height * 0.4 ))
                         .foregroundColor(buttonTextColor)
                 }
             }
-                
+            
+        }.alert(isPresented:$showingAlert) {
+            Alert(
+                title: Text("Important message"),
+                message: Text(#"Wear 🧦 in winter, you may find an iPad Calculator App in them ¯\\_(ツ)_/¯"#),
+                dismissButton: .default(Text("Got it!"))
+            )
         }
-
-    }//end CalculatorButton View
+    }
+    //end CalculatorButton View
     
 }
 
 struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButton(buttonText: "test", buttonTextColor: Color.white, buttonColor: Color.orange, buttonSymbol: Symbols.one, viewModel: CalculatorViewModel())
+        CalculatorButton(buttonText: "test", buttonTextColor: Color.white, buttonColor: .orange, buttonSymbol: Symbols.one, viewModel: CalculatorBrains())
     }
 }

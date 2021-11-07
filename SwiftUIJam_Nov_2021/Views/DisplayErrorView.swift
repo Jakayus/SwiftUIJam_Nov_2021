@@ -25,14 +25,13 @@ struct DisplayErrorView: View {
                     Text(errorMessage)
                 }
             }
-            
             .padding(8)
             .background(
                 Color.red.brightness(0.4)
-                    .cornerRadius(16, corners: .bottomLeft)
+                    .cornerRadius(16, corners: [.bottomLeft, .topLeft])
                     .transition(.move(edge: .trailing))
             )
-            .transition(.move(edge: .top))
+            .transition(.move(edge: .trailing))
         } else {
             EmptyView()
         }
@@ -41,6 +40,6 @@ struct DisplayErrorView: View {
 
 struct DisplayErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        DisplayErrorView(errorMessage: "Unknown operator '$' ")
+        DisplayErrorView(errorMessage: "Error error")
     }
 }

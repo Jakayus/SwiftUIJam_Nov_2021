@@ -12,7 +12,7 @@ import Foundation
 enum Symbols: String {
     case plus = "+"
     case minus = "-"
-    case divide = "/"
+    case divide = "÷"
     case multiply = "x"
     case one = "1"
     case two = "2"
@@ -24,4 +24,8 @@ enum Symbols: String {
     case eight = "8"
     case nine = "9"
     case zero = "0"
+    case decimal = "."
+    case allClear = "AC"
+    case backspace = "⬅"
+    case equals = "="
 }
