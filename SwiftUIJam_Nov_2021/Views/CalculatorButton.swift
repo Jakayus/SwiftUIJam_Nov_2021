@@ -13,10 +13,18 @@ struct CalculatorButton: View {
     @State var buttonTextColor: Color
     @State var buttonColor: Color
     
+    @State var buttonSymbol: Symbols
+    @ObservedObject var viewModel: CalculatorViewModel
+    
+    
     var body: some View {
         Button(action: {
             //function call here
             print("button press")
+            
+            viewModel.buttonPressed(buttonSymbol)
+            print(viewModel.expression)
+            
         } ) {
             
             //Geometry reader used to allow Text to change based on landscape or portrait
@@ -38,6 +46,6 @@ struct CalculatorButton: View {
 
 struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButton(buttonText: "test", buttonTextColor: Color.white, buttonColor: Color.orange)
+        CalculatorButton(buttonText: "test", buttonTextColor: Color.white, buttonColor: Color.orange, buttonSymbol: Symbols.one, viewModel: CalculatorViewModel())
     }
 }
